@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="calculate">
+        <h1>Calculate average marks</h1>
+        <form action="{{url_for('calculate')}}" method="post">
+            <input type="text" name="maths" placeholder="maths" required="required" />
+            <input type="text" name="scince" placeholder="scince" required="required" />
+            <input type="text" name="social scince" placeholder="social scince" required="required" />
+            <button type="text" class="btn btn-primary btn-block btn-large">Calculate Button</button>
+
+        </form>
+
+    </div>
+</body>
+
+</html>

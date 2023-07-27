@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add ToDo's</h1>
+
+    <div class="container">
+        <form action="/" method ="POST">
+            <div class="my-3">
+              <label for="title" class="form-label">ToDo</label>
+              <input type="text" name="title" class="form-control" id="title" >
+              
+            </div>
+            
+            <div class="my-3">
+              <label for="value1" class="form-label">Discription</label> 
+              <input type="text" name="value1" class="form-control" id="value1">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        
+    </div>
+    <h1>ToDoList</h1>
+    <div class="container"><table class="table">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for todo in alltodo %}
+          <tr>
+            <th scope="row">{{loop.index}}</th>
+            <td>{{todo.title}}</td>
+            <td>{{todo.value1}}</td>
+            <td>{{todo.date_created}}</td>
+          </tr>
+        {% endfor %}    
+        </tbody>
+      </table></div>
+</body>
+</html>
